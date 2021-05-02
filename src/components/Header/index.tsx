@@ -5,7 +5,11 @@ import SunIcon from '../../assets/images/icons/sun.png';
 import SunAndCloudIcon from '../../assets/images/icons/sun_and_cloud.png';
 import MoonIcon from '../../assets/images/icons/moon.png';
 
-function Header(){
+interface IHeaderProps {
+    pageTitle: string;
+}
+
+function Header({ pageTitle } : IHeaderProps){
     const [ receptionMessage, setReceptionMessage ] = useState<string>('');
     const [ recepctionMessageIcon, setReceptionMessageIcon ] = useState<string>('');
 
@@ -34,7 +38,7 @@ function Header(){
             <div>
                 <h3>Adote um Pet</h3>
                 <span>|</span>
-                <h3>Página Inicial</h3>
+                <h3>{ pageTitle }</h3>
             </div>
 
             <div>

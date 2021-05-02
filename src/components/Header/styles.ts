@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 export const Container = styled.header`
+    height:3rem;
+
     display:flex;
     align-items:center;
     justify-content:space-between;
