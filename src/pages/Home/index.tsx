@@ -10,7 +10,7 @@ import FavoritesPetsAmountCard from '../../components/Cards/FavoritesPetsAmount'
 import PopularPetsCard from '../../components/Cards/PopularPets';
 import AppStatistics from '../../components/Cards/AppStatistics';
 import Assessment from '../../components/Cards/Assessment';
-import Climate from '../../components/Cards/Climate';
+import Weather from '../../components/Cards/Weather';
 
 function Home(){
     return(
@@ -25,7 +25,7 @@ function Home(){
                         <AppStatistics />
                     </div>
                     <div className="row">
-                        {/* <Climate /> */}
+                        <Weather />
                         <Assessment />
                     </div>
                 </Content>

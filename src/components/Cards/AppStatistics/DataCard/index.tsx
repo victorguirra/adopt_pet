@@ -12,7 +12,7 @@ interface IDataCardProps {
 
 function DataCard({ title, color, amountAdoptionsInLastHour, children } : IDataCardProps){
     const currentDate = new Date();
-    const oneHourAgo = new Date(currentDate.getTime() - (1000*60*60));
+    const oneHourAgo = new Date(currentDate.getTime() - (1000 * 60 * 60));
     
     function getHoursOfDate(date: Date){
         const fullHour = date.toString().split(' ');

@@ -34,6 +34,9 @@ export const Container = styled.div`
         padding-left:3.2rem;
         margin-top:.8rem;
 
+        display:flex;
+        gap:.4rem;
+
         > p {
             color:${({ theme }) => theme.colors.gray_800 };
             font-size:.9rem;
