@@ -8,8 +8,6 @@ interface IStarsAssessment {
 }
 
 function StarsAssessment({ starsAmount } : IStarsAssessment){
-    //const starsAmount = 4;
-
     const fillStars = new Array(starsAmount).fill('');
     const outlineStars = new Array(5 - starsAmount).fill('');
 
