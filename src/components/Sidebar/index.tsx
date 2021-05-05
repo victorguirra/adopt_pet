@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useLocation } from 'react-router-dom';
 import { Container, MenuItem } from './styles';
 
 import { AiFillHome, AiFillSignal } from 'react-icons/ai';
@@ -7,63 +8,58 @@ import { GoSettings } from 'react-icons/go';
 import { RiCheckboxMultipleFill } from 'react-icons/ri';
 
 function Sidebar(){
-    const [ activeMenuItem, setActiveMenuItem ] = useState(0);
-
+    const { pathname } = useLocation();
+    
     return(
         <Container>
             
             <MenuItem 
                 to="/" 
-                isActive={ activeMenuItem === 0 ? true : false }
-                onClick={ () => setActiveMenuItem(0) }
+                isActive={ pathname === '/' ? true : false }
             >
                 <AiFillHome 
                     size={ 30 } 
-                    color={ activeMenuItem === 0 ? '#68CAD7' : '#FFF' } 
-                />
-            </MenuItem>
-            
-            <MenuItem 
-                to="/" 
-                isActive={ activeMenuItem === 1 ? true : false }
-                onClick={ () => setActiveMenuItem(1) }
-            >
-                <AiFillSignal 
-                    size={ 30 } 
-                    color={ activeMenuItem === 1 ? '#68CAD7' : '#FFF' }
+                    color={ pathname === '/' ? '#68CAD7' : '#FFF' } 
                 />
             </MenuItem>
 
             <MenuItem 
-                to="/" 
-                isActive={ activeMenuItem === 2 ? true : false }
-                onClick={ () => setActiveMenuItem(2) }
+                to="/main" 
+                isActive={ pathname === '/main' ? true : false }
             >
                 <RiCheckboxMultipleFill 
                     size={ 30 } 
-                    color={ activeMenuItem === 2 ? '#68CAD7' : '#FFF' }
+                    color={ pathname === '/main' ? '#68CAD7' : '#FFF' }
+                />
+            </MenuItem>
+
+            <MenuItem 
+                to="/rotaASerCriada1" 
+                isActive={ pathname === '/rotaASerCriada1' ? true : false }
+            >
+                <AiFillSignal 
+                    size={ 30 } 
+                    color={ pathname === '/rotaASerCriada1' ? '#68CAD7' : '#FFF' }
                 />
             </MenuItem>
 
             <MenuItem 
                 to="/profile" 
-                isActive={ activeMenuItem === 3 ? true : false }
-                onClick={ () => setActiveMenuItem(3) }
+                isActive={ pathname === '/profile'? true : false }
             >
                 <BsPersonLinesFill 
                     size={ 30 } 
-                    color={ activeMenuItem === 3 ? '#68CAD7' : '#FFF' }
+                    color={ pathname === '/profile' ? '#68CAD7' : '#FFF' }
                 />
             </MenuItem>
 
             <MenuItem 
                 to="/settings" 
-                isActive={ activeMenuItem === 4 ? true : false }
-                onClick={ () => setActiveMenuItem(4) }
+                isActive={ pathname === '/settings' ? true : false }
             >
                 <GoSettings 
                     size={ 30 } 
-                    color={ activeMenuItem === 4 ? '#68CAD7' : '#FFF' }
+                    color={ pathname === '/settings' ? '#68CAD7' : '#FFF' }
                 />
             </MenuItem>
         </Container>
