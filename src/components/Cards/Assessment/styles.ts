@@ -15,7 +15,7 @@ export const Container = styled.footer`
         width:.6rem;
     }
     ::-webkit-scrollbar-thumb{
-        background-color:${({ theme }) => theme.colors.blue };
+        background-color:${({ theme }) => theme.colors.orange };
         border-radius:.8rem;
     }
     ::-webkit-scrollbar-track{
