@@ -24,6 +24,20 @@ export const Content = styled.div`
     border-radius:1.3rem;
     background-color:${({ theme }) => theme.colors.gray_300 };
 
+    overflow-y:scroll;
+
+    ::-webkit-scrollbar{
+        width:.6rem;
+    }
+    ::-webkit-scrollbar-thumb{
+        background-color:${({ theme }) => theme.colors.blue };
+        border-radius:.8rem;
+    }
+    ::-webkit-scrollbar-track{
+        background-color:${({theme}) => theme.colors.gray_300 };
+        border-radius:.8rem;
+    }
+
     .row {
         width:100%;
 
@@ -35,12 +49,4 @@ export const Content = styled.div`
     .row:not(:first-of-type){
         margin-top:3rem;
     }
-`;
-
-export const Aside = styled.aside`
-    width:15%;
-    height:100%;
-
-    border-radius:1.3rem;
-    background-color:${({ theme }) => theme.colors.orange };
 `;
