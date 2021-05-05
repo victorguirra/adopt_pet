@@ -19,7 +19,7 @@ export const Container = styled.footer`
         border-radius:.8rem;
     }
     ::-webkit-scrollbar-track{
-        background-color:${({theme}) => theme.colors.gray_300 };
+        background-color:${({ theme }) => theme.colors.gray_300 };
         border-radius:.8rem;
     }
 
