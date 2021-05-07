@@ -1,10 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-interface IMenuItemProps {
-    isActive?: boolean;
-}
-
 export const Container = styled.div`
     background-color:${({ theme }) => theme.colors.blue };
 
@@ -15,18 +11,18 @@ export const Container = styled.div`
     gap:80px;
 `;
 
-export const MenuItem = styled(Link)<IMenuItemProps>`
+export const MenuItem = styled(Link)`
     width:3rem;
     height:3rem;
     
     border-radius:.7rem;
-
-    background-color:${ props => props.isActive 
-        ? props.theme.colors.white
-        : 'transparent' 
-    };
+    background-color:transparent;
 
     display:flex;
     align-items:center;
     justify-content:center;
+
+    &.isActive {
+        background-color:${({ theme }) => theme.colors.white };
+    }
 `;

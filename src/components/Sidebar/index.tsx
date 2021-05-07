@@ -15,7 +15,7 @@ function Sidebar(){
             
             <MenuItem 
                 to="/" 
-                isActive={ pathname === '/' ? true : false }
+                className={ pathname === '/' ? 'isActive' : '' }
             >
                 <AiFillHome 
                     size={ 30 } 
@@ -25,7 +25,7 @@ function Sidebar(){
 
             <MenuItem 
                 to="/main" 
-                isActive={ pathname === '/main' ? true : false }
+                className={ pathname === '/main' ? 'isActive' : '' }
             >
                 <RiCheckboxMultipleFill 
                     size={ 30 } 
@@ -35,7 +35,7 @@ function Sidebar(){
 
             <MenuItem 
                 to="/rotaASerCriada1" 
-                isActive={ pathname === '/rotaASerCriada1' ? true : false }
+                className={ pathname === '/rotaASerCriada1' ? 'isActive' : '' }
             >
                 <AiFillSignal 
                     size={ 30 } 
@@ -45,7 +45,7 @@ function Sidebar(){
 
             <MenuItem 
                 to="/profile" 
-                isActive={ pathname === '/profile'? true : false }
+                className={ pathname === '/profile'? 'isActive' : '' }
             >
                 <BsPersonLinesFill 
                     size={ 30 } 
@@ -55,7 +55,7 @@ function Sidebar(){
 
             <MenuItem 
                 to="/settings" 
-                isActive={ pathname === '/settings' ? true : false }
+                className={ pathname === '/settings' ? 'isActive' : '' }
             >
                 <GoSettings 
                     size={ 30 } 
