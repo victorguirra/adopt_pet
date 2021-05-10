@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.header`
     width:25rem;
+    height:35rem;
     padding:1rem;
 
     border-radius:.8rem;
@@ -50,7 +51,10 @@ export const Body = styled.main`
     p {
         color:${({ theme }) => theme.colors.gray_800 };
         margin-top:.7rem;
-        margin-bottom:2rem;
+        margin-bottom:2.8rem;
+
+        height:3rem;
+        text-overflow: ellipsis;
     }
 `;
 

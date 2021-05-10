@@ -28,9 +28,20 @@ function Weather(){
 
     setInterval(function(){
         const currentDate = new Date();
-        setCurrentHours(currentDate.getHours().toString().length === 1 ? `0${currentDate.getHours()}` : currentDate.getHours().toString());
-        setCurrentMinutes(currentDate.getMinutes().toString().length === 1 ? `0${currentDate.getMinutes()}` : currentDate.getMinutes().toString());
-        setCurrentSeconds(currentDate.getSeconds().toString().length === 1 ? `0${currentDate.getSeconds()}` : currentDate.getSeconds().toString())
+        setCurrentHours(currentDate.getHours().toString().length === 1 
+            ? `0${currentDate.getHours()}` 
+            : currentDate.getHours().toString()
+        );
+
+        setCurrentMinutes(currentDate.getMinutes().toString().length === 1 
+            ? `0${currentDate.getMinutes()}` 
+            : currentDate.getMinutes().toString()
+        );
+        
+        setCurrentSeconds(currentDate.getSeconds().toString().length === 1 
+            ? `0${currentDate.getSeconds()}` 
+            : currentDate.getSeconds().toString()
+        );
     }, 1000);
 
     function convertKelvinToCelsius(kelvinTemperature: number){
@@ -57,7 +68,6 @@ function Weather(){
                     }).catch(err => {
                         console.log(`Erro na requisição: ${ err }`);
                     })
-                
             })()
         })
     }, [])
