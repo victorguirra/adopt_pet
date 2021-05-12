@@ -2,6 +2,7 @@ const catalog = [
     {
         authorName:'Victor Guirra',
         authorImage: 'https://avatars.githubusercontent.com/u/63051439?v=4',
+        contactNumber: '61985622749',
         announcementDate: '01/07/2020',
         isLiked: false,
         inYourContacts: false,
@@ -22,6 +23,7 @@ const catalog = [
     {
         authorName:'Mateus Silva',
         authorImage: 'https://avatars.githubusercontent.com/u/40677854?v=4',
+        contactNumber: '61985622749',
         announcementDate: '14/01/2021',
         isLiked: false,
         inYourContacts: false,
@@ -40,6 +42,7 @@ const catalog = [
     {
         authorName:'Joas Junior',
         authorImage: 'https://avatars.githubusercontent.com/u/72051424?v=4',
+        contactNumber: '61983410545',
         announcementDate: '22/03/2021',
         isLiked: false,
         inYourContacts: false,

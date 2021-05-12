@@ -13,6 +13,7 @@ import { AiOutlinePlus } from 'react-icons/ai';
 interface IAdvertProps {
     authorName: string;
     authorImage: string;
+    contactNumber: string;
     announcementDate: string;
     isLiked: boolean;
     inYourContacts: boolean;

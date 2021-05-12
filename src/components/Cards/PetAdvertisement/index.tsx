@@ -15,6 +15,7 @@ interface IPetAdvertisementProps {
 interface IDataProps {
     authorName: string;
     authorImage: string;
+    contactNumber: string;
     announcementDate: string;
     isLiked: boolean;
     inYourContacts: boolean;
@@ -34,6 +35,8 @@ function PetAdvertisement({ data } : IPetAdvertisementProps){
     const [ isLiked, setIsLiked ] = useState<boolean>(data.isLiked);
     const [ inYourContacts, setInYourContacts ] = useState<boolean>(data.inYourContacts);
     
+    const whatsappInitialMessage = `Olá ${ data.authorName }, tudo bem? Estou interessado no ${ data.petInfos.name }, anunciado por você no site Adote um Pet! Podemos conversar?`;
+
     return(
         <Container>
             <Header>
@@ -66,7 +69,7 @@ function PetAdvertisement({ data } : IPetAdvertisementProps){
             </Body>
 
             <Footer>
-                <a href="http://www.google.com.br" target="blank">
+                <a href={`https://wa.me/55${ data.contactNumber }/?text=${ whatsappInitialMessage }`} target="blank">
                     <FaWhatsapp size={ 25 } color="#FFF" />
                     Entrar em contato
                 </a>
