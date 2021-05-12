@@ -1,10 +1,14 @@
 import React from 'react';
 
+import { FiltersProvider } from './hooks/filters';
+
 import Routes from './routes';
 
 function App(){
   return(
-    <Routes />
+    <FiltersProvider>
+      <Routes />
+    </FiltersProvider>
   )
 }
 

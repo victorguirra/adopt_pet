@@ -19,6 +19,7 @@ interface IDataProps {
     isLiked: boolean;
     inYourContacts: boolean;
     petInfos: {
+        category: string;
         name: string;
         desctiption: string;
         images: IPetAdvertimentImagesProps[];

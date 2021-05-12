@@ -1,15 +1,12 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const Container = styled.div`
     height:100vh;
     padding:3rem;
     
     background-color:${({ theme }) => theme.colors.gray_300 };
-
-    display:flex;
-    flex-wrap:wrap;
-    gap:3rem;
-
+    
     overflow-y:scroll;
 
     ::-webkit-scrollbar{
@@ -23,4 +20,28 @@ export const Container = styled.div`
         background-color:${({theme}) => theme.colors.gray_300 };
         border-radius:.8rem;
     }
+
+    > main {
+        margin-top:3rem;
+        
+        display:flex;
+        flex-wrap:wrap;
+        gap:3rem;
+    }
+`;
+
+export const NewPostButton = styled(Link)`
+    width:4rem;
+    height:4rem;
+    border-radius:50%;
+
+    background-color:${({ theme }) => theme.colors.purple_500 };
+
+    position:absolute;
+    bottom:3rem;
+    right:3.5rem;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
 `;
