@@ -20,12 +20,13 @@ interface IAdvertProps {
     petInfos: {
         category: string;
         name: string;
-        desctiption: string;
+        description: string;
         images: IPetAdvertimentImagesProps[];
     };
 }
 
 interface IPetAdvertimentImagesProps {
+    title: string;
     source: string;
 }
 
@@ -64,7 +65,7 @@ function Main(){
                 ))}
             </main>
             
-            <NewPostButton to="/">
+            <NewPostButton to="/petRegister">
                 <AiOutlinePlus size={ 30 } color="#fff" />
             </NewPostButton>
         </Container>
