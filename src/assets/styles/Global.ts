@@ -10,8 +10,15 @@ export default createGlobalStyle`
     }
 
     button {
-        outline:none;
         border:none;
         cursor:pointer;
+    }
+
+    button, input, textarea, select, option {
+        outline:none;
+    }
+
+    select {
+        background-color:transparent;
     }
 `;
