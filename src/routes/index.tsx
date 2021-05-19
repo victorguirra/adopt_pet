@@ -6,7 +6,7 @@ import Layout from '../components/Layout';
 import Home from '../pages/Home';
 import Main from '../pages/Main';
 import Profile from '../pages/Profile';
-import Settings from '../pages/Settings';
+import PetRegister from '../pages/PetRegister';
 
 function Routes(){
     return(
@@ -16,7 +16,7 @@ function Routes(){
                     <Route exact path="/" component={ Home } />
                     <Route exact path="/main" component={ Main } />
                     <Route exact path="/profile" component={ Profile } />
-                    <Route exact path="/settings" component={ Settings } />
+                    <Route exact path="/petRegister" component={ PetRegister } />
                 </Switch>
             </Layout>
         </BrowserRouter>
