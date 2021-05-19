@@ -22,12 +22,13 @@ interface IDataProps {
     petInfos: {
         category: string;
         name: string;
-        desctiption: string;
+        description: string;
         images: IPetAdvertimentImagesProps[];
     };
 }
 
 interface IPetAdvertimentImagesProps {
+    title: string;
     source: string;
 }
 
@@ -60,7 +61,7 @@ function PetAdvertisement({ data } : IPetAdvertisementProps){
             <Body>
                 <span>{ data.petInfos.name }</span>
 
-                <p>{ data.petInfos.desctiption }</p>
+                <p>{ data.petInfos.description }</p>
 
                 <Carousel 
                     petName={ data.petInfos.name } 
