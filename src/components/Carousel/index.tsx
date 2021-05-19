@@ -9,6 +9,7 @@ interface ICarouselProps {
 }
 
 interface IImagesProps {
+    title: string;
     source: string;
 }
 
